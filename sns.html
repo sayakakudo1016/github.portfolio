@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pom Diary 2022</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sns.css">
+</head>
+
+<body> 
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="header-left">
+                    <img class="header-logo" src="img/pomdairy.icon.png" alt="Pom Diary">
+                </div>
+                <div class="header-right">
+                    <a href="top.html">Top</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="photo.html">Photo</a>
+                    <a href="movie.html">Movie</a>
+                    <a href="sns.html">SNS</a>
+                    <div class="burger"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="top.html">TOP</a>
+                    </li>
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="photo.html">Photo</a>
+                    </li>
+                    <li>
+                        <a href="movie.html">Movie</a>
+                    </li>
+                    <li>
+                        <a href="sns.html">SNS</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+
+   <main>
+        <div class="sns_title">SNS</div>
+
+        <div class="sns-icon">
+            <p class="twitter_text">Twitterのアカウントはこちら
+                <a href="https://twitter.com/future_1313">
+                    <img class="twitter_logo" src="img/twitter.svg">
+                </a>
+            </p>
+            <p class="instagram_text">Instagramのアカウントはこちら
+                <a href="https://t.co/EBtsrR2FRk">
+                    <img class="instagram_logo" src="img/instagram.svg">
+                </a>
+            </p>
+            <p class="youtube_text">YouTubeのアカウントはこちら
+                <a href="https://t.co/2VqqM4mPJg">
+                    <img class="youtube_logo" src="img/youtube-3.svg">
+                </a>
+            </p>
+            <p class="tiktok_text">TikTokのアカウントはこちら
+                <a href="https://tiktok.com/@pompom1016">
+                    <img class="tiktok_logo" src="img/tiktok-logo.svg">
+                </a>
+            </p>
+        </div>
+
+   </main>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-left">
+                    <p>このサイトをシェアする</p>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="夢見るフランス" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="footer-right">
+                    &copy; 2022 Pom Diary.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script>
+       $('.burger').click(function(){
+           $(".burger").toggleClass("is-active");
+           $(".menu").toggleClass("is-active");
+       })
+   </script>
+</body>
+
+</html>
