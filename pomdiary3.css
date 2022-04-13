@@ -1,0 +1,319 @@
+/* 初期化 */
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* font統一 */
+html{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+/* container */
+.container {
+    max-width: 980px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header */
+.header {
+    position: relative;
+    height: 56px;
+    width: 100vw;
+    box-shadow: 0 0 10px #f7c3bf;
+    background-color: #efebe0;
+    top: 0;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-logo {
+    height: 40px;
+    margin-top: 8px;
+}
+
+.header-right{
+    float: right;
+}
+
+.header-right a {
+    line-height: 56px;
+    color: #8ac8cf;
+    margin-left: 5px;
+    font-size: 16px;
+    padding: 16px 5px;
+}
+
+.header-right a:hover {
+    background-color: #ddd;
+    transition: background-color 0.5s;
+}
+
+/* burger */
+.burger {
+    width: 40px;
+    height: 40px;
+    float: right;
+    background-image: url(img/burger.svg);
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px 0 0 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.burger.is-active {
+    background-image: url(img/close.svg);
+}
+
+.burger:hover {
+    background-color: #ddd;
+}
+
+/* menu */
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7c3bf;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: none;
+}
+
+.menu li{
+    display: block;
+    padding: 0 0 15px 15px;
+}
+
+.menu a{
+    color: #8ac8cf;
+    display: block;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 50px;
+    margin-top: 5px;
+}
+
+.menu a:hover {
+    color: #ddd;
+}
+
+.menu.is-active{
+    display: flex;
+}
+
+/* footer */
+.footer{
+    height: 120px;
+    background-color: #efebe0;
+    color: #8ac8cf;
+    padding-top: 20px;
+}
+
+.footer-left{
+    float: left;
+}
+
+.footer-left p{
+    margin-bottom: 8px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.footer-right{
+    float: right;
+    padding-top: 40px;
+    font-family: "Comic Sans MS";
+}
+
+/* main */
+main{
+    background-color: #f7c3bf;
+}
+
+/* main-visual */
+.main-visual{
+    padding-top: 100px;
+    padding-bottom: 35px;
+    background-image: url(img/pom.travel.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.top-title{
+    font-size: 80px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+  font-size: 70px;
+  color: transparent;
+  text-shadow: 3px 3px 0 #8ac8cf;
+  -webkit-text-stroke: 2px #efebe0;
+}
+
+.top-subtitle{
+    font-size: 35px;
+    padding-bottom: 40px;
+    color: transparent;
+  text-shadow: 3px 3px 0 #8ac8cf;
+  -webkit-text-stroke: 2px #efebe0;
+}
+
+.top-text{
+    margin-top: 250px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #8ac8cf;
+    overflow: hidden;
+  animation: flowing-anim 8s;
+  white-space: nowrap;
+}
+
+@keyframes flowing-anim {
+    0%{
+        width: 0%;
+      }
+   100%{
+        width: 100%;
+      }
+   }
+
+.mainnews-image{
+    width: 490px;
+    height: 650px;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 4px #fff;
+    border-radius: 5px;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.mainnews-text{
+    padding-top: 100px;
+    font-size: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: transparent;
+  text-shadow: 3px 3px 0 #8ac8cf;
+  -webkit-text-stroke: 2px #efebe0;
+}
+
+.mainnews-subtext{
+    color: #8ac8cf;
+    padding-top: 30px;
+    font-size: 30px;
+    padding-bottom: 30px;
+    inline-size: 1.5;
+}
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+}
+
+.slider img {
+    width:40vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);/*左右の画像のサイズを80%に*/
+  transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+  transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+  opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
+}
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
