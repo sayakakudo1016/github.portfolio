@@ -1,0 +1,139 @@
+/* 初期化 */
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* font統一 */
+html{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+/* container */
+.container {
+    max-width: 980px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header */
+.header {
+    position: relative;
+    height: 56px;
+    width: 100vw;
+    box-shadow: 0 0 10px #dddddd;
+    background-color: #efebe0;
+    top: 0;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-logo {
+    height: 40px;
+    margin-top: 8px;
+}
+
+.header-right{
+    float: right;
+}
+
+.header-right a {
+    line-height: 56px;
+    color: #8ac8cf;
+    margin-left: 5px;
+    font-size: 16px;
+    padding: 16px 5px;
+}
+
+.header-right a:hover {
+    background-color: #ddd;
+    transition: background-color 0.5s;
+}
+
+/* burger */
+.burger {
+    width: 40px;
+    height: 40px;
+    float: right;
+    background-image: url(img/burger.svg);
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px 0 0 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.burger.is-active {
+    background-image: url(img/close.svg);
+}
+
+.burger:hover {
+    background-color: #ddd;
+}
+
+/* menu */
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7c3bf;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: none;
+}
+
+.menu li{
+    display: block;
+    padding: 0 0 15px 15px;
+}
+
+.menu a{
+    color: #8ac8cf;
+    display: block;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 50px;
+    margin-top: 5px;
+}
+
+.menu a:hover {
+    color: #ddd;
+}
+
+.menu.is-active{
+    display: flex;
+}
+
+/* footer */
+.footer{
+    height: 120px;
+    background-color: #efebe0;
+    color: #8ac8cf;
+    padding-top: 20px;
+}
+
+.footer-left{
+    float: left;
+}
+
+.footer-left p{
+    margin-bottom: 8px;
+}
+
+.footer-right{
+    float: right;
+    padding-top: 40px;
+}
+
+/* main */
+main{
+    background-color: #f7c3bf;
+}
